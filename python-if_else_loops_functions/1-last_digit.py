@@ -8,7 +8,7 @@ if number < 0:
         print(f"last digit of {number} is {number_u % 10} and is \
 less than 6 and not 0")
     else:
-        print(f"last digit of {number} is -{number_u % 10} and is less \
+        print(f"Last digit of {number} is -{number_u % 10} and is less \
 than 6 and not 0")
 elif number > 0:
     if number % 10 > 5:
