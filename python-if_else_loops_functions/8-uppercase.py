@@ -4,9 +4,8 @@
 
 def uppercase(str):
     x = len(str)
-    for i in range(0, x):
-        a = ord(str[i])
-        if a > 96 and a < 123:
-            print("{}".format(chr(a - 32)), end=("\n" if i == x - 1 else ""))
-        else:
-            print("{}".format(str[i]), end=("\n" if i == x - 1 else ""))
+    for i in str:
+        if  i >= 'a' and i <= 'z':
+            i = chr(ord(i) - 32)
+        print("{:s}".format(i), end=("\n" if x == 1 else ""))
+        x -= 1
