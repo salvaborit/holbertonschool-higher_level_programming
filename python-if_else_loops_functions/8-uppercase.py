@@ -3,11 +3,10 @@
 
 
 def uppercase(str):
-    strlen = len(str)
-    for i in range(0, strlen):
-        i_ascii = ord(str[i])
-        if i_ascii > 96 and i_ascii < 123:
-            print("{}".format(chr(i_ascii - 32)),
-                  end=("\n" if i == strlen - 1 else ""))
+    x = len(str)
+    for i in range(0, x):
+        a = ord(str[i])
+        if a > 96 and a < 123:
+            print("{}".format(chr(a - 32)), end=("\n" if i == x - 1 else ""))
         else:
-            print("{}".format(str[i]), end=("\n" if i == strlen - 1 else ""))
+            print("{}".format(str[i]), end=("\n" if i == x - 1 else ""))
