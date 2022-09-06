@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# prints a string in uppercase
 
 
 def uppercase(str):
