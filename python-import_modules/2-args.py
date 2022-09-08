@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 
 
-from platform import python_branch
-
-
 if __name__ == "__main__":
     import sys
     if len(sys.argv) == 1:
