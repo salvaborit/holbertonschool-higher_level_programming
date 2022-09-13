@@ -5,5 +5,5 @@ def print_matrix_integer(matrix=[[]]):
     for full_row in matrix:
         idx = 0
         for i in full_row:
-            print("{}".format(i), end=" " if idx < 2 else "\n")
+            print("{:d}".format(i), end=" " if idx < 2 else "\n")
             idx += 1
