@@ -2,6 +2,9 @@
 
 
 def print_matrix_integer(matrix=[[]]):
+    if matrix == [[]]:
+        print()
+        return
     for row in matrix:
         idx = 0
         for i in row:
