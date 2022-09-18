@@ -9,9 +9,8 @@ def roman_to_int(roman_string):
     exc = {"IV": 4, "IX": 9, "XL": 40, "XC": 90, "CD": 400, "CM": 900}
     exc_keys = exc.keys()
     sum = 0
-    # numerals = list(map(lambda i: roman_dict[i], roman_string))
 
-    # find idx of exceptions and save in list like: (index of exc, 'exception')
+    # find idx of exceptions and save in list: (index of exc, "exc literal")
     exc_indexes = []
     start = 0
     while start < len(roman_string) and start != -1:
@@ -20,7 +19,6 @@ def roman_to_int(roman_string):
             if exc_index != -1:
                 exc_indexes.append((exc_index, key))
             start += 1
-    # print(f"exceptions = {exc_indexes}")
 
     # start adding while taking exceptions into account
     roman_idx = 0
