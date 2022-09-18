@@ -11,6 +11,7 @@ def roman_to_int(roman_string):
     sum = 0
 
     # find idx of exceptions and save in list: (index of exc, "exc literal")
+    #                                    list of tuples
     exc_indexes = []
     start = 0
     while start < len(roman_string) and start != -1:
