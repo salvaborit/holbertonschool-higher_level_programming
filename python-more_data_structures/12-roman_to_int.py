@@ -13,25 +13,26 @@ def roman_to_int(roman_string):
 
     # find idx of exceptions and save in list: (index of exc, "exc literal")
     #                                    list of tuples
-    exc_indexes = []
+    exception_indices = []
     i = 0
     while i < len(roman_string) and i != -1:
         for key in roman_exceptions.keys():
-            exc_index = roman_string.find(key)
-            if exc_index != -1:
-                exc_indexes.append((exc_index, key))
+            exception_index = roman_string.find(key)
+            if exception_index != -1:
+                exception_indices.append((exception_index, key))
+                i += 1
             i += 1
 
     # start adding while taking exceptions into account
     idx = 0
-    exc_found = False
+    exception_found = False
     while idx < len(roman_string):
-        for e in exc_indexes:
+        for e in exception_indices:
             if idx == e[0]:
                 sum += roman_exceptions[e[1]]
-                exc_found = True
+                exception_found = True
                 break
-        if exc_found is False:
+        if exception_found is False:
             sum += roman_numerals[roman_string[idx]]
         idx += 1
 
