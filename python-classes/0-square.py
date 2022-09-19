@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+""" This is a module """
 
-""" This is an empty square """
+
 class Square:
+    """ This is a class """
     {}
