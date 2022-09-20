@@ -40,6 +40,9 @@ class Square:
 
     def my_print(self):
         """Prints the square with # (hashbangs)"""
+        if self.__size == 0:
+            print()
+            return
         for i in range(0, self.__size):
             for i in range(0, self.__size):
                 print(f"#", end='' if i < self.__size - 1 else '\n')
