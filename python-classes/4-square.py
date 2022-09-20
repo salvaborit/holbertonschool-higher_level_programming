@@ -3,12 +3,12 @@
 
 
 class Square:
+    """On instantiation
+    Args:
+        size (int): size of square
+    """
 
     def __init__(self, size=0):
-        """On instantiation
-        Args:
-            size (int): size of square
-        """
         if type(size) is not int:
             raise TypeError('size must be >= 0')
         if size < 0:
