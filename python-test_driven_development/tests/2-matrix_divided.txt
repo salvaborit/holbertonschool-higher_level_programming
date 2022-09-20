@@ -1,0 +1,10 @@
+The ''0-add_integer'' module
+======================
+
+Using ''add_integer''
+-------------------
+
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
