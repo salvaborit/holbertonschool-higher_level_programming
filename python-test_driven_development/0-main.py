@@ -13,3 +13,5 @@ try:
     print(add_integer(None))
 except Exception as e:
     print(e)
+
+print(f"float overflow = {add_integer(float('inf'))}")
