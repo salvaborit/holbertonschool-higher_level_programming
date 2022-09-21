@@ -30,4 +30,4 @@ def text_indentation(text):
             print(text[start:].lstrip(), end='')
 
     if delim_found is False:
-        print(text.lstrip())
+        print(text.lstrip(), end='')
