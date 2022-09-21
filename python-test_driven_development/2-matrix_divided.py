@@ -2,11 +2,16 @@
 """Python interpreter"""
 
 
+from email.iterators import typed_subpart_iterator
+
+
 def matrix_divided(matrix, div):
     """Divides a matrix by a number
     Args:
         matrix (list of lists): have to measure the same, only numbers
         div (int): number to divide matrix items by
+    Returns:
+        new matrix os the same size with all items divided by div
     """
     row_num = 0
     for row in matrix:
@@ -15,7 +20,9 @@ def matrix_divided(matrix, div):
         row_length = len(row)
         for item in row:
             if type(item) is not int and type(item) is not float:
-                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                raise TypeError('matrix must be a matrix (list of lists)'
+                                ' of integers/floats')
+
         row_num += 1
 
     if type(div) is not int and type(div) is not float:
