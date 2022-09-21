@@ -2,9 +2,6 @@
 """Python interpreter"""
 
 
-from email.iterators import typed_subpart_iterator
-
-
 def matrix_divided(matrix, div):
     """Divides a matrix by a number
     Args:
