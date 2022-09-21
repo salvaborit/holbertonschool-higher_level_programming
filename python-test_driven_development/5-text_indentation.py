@@ -18,10 +18,16 @@ def text_indentation(text):
     # new_text = new_text.replace(": ", ":\n")
     # new_text = new_text.replace(":", ":\n")
 
+    delim_found = False
     start = 0
-    end = len(text)
     for idx in range(len(text)):
         if text[idx] in ".:?":
+            delim_found = True
             end = idx + 1
             print(text[start:end].lstrip(), end='\n\n')
             start = end
+        if delim_found is True and idx == len(text) - 1:
+            print(text[start:].lstrip())
+
+    if delim_found is False:
+        print(text.lstrip())
