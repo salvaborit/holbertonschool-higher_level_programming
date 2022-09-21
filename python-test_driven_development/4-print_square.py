@@ -3,7 +3,7 @@
 
 
 def print_square(size):
-    """Prints a square of # (hashbangs)"""
+    """Prints a square of hashbangs (#)"""
 
     if type(size) is not int:
         raise TypeError('size must be an int')
@@ -13,7 +13,7 @@ def print_square(size):
         raise TypeError('size must be an integer')
 
     for row in range(size):
-        col_count = 0
+        # col_count = 0
         for col in range(size):
-            print("#", end='' if col_count != size - 1 else '\n')
-            col_count+= 1
+            print("#", end='' if col != size - 1 else '\n')
+            # col_count += 1
