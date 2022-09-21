@@ -10,14 +10,6 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError('text must be a string')
 
-    # new_text = ""
-    # new_text = text.replace(". ", ".\n")
-    # new_text = new_text.replace(".", ".\n")
-    # new_text = new_text.replace("? ", "?\n")
-    # new_text = new_text.replace("?", "?\n")
-    # new_text = new_text.replace(": ", ":\n")
-    # new_text = new_text.replace(":", ":\n")
-
     delim_found = False
     start = 0
     for idx in range(len(text)):
