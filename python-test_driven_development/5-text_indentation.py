@@ -27,7 +27,7 @@ def text_indentation(text):
             print(text[start:end].lstrip(), end='\n\n')
             start = end
         if delim_found is True and idx == len(text) - 1:
-            print(text[start:].lstrip())
+            print(text[start:].lstrip(), end='')
 
     if delim_found is False:
         print(text.lstrip())
