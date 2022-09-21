@@ -72,4 +72,6 @@ class Rectangle:
 
     # MIGHT HAVE TO MODIFY, if main.py not like checker's
     def __repr__(self):
-        return "Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")"
+        string = "Rectangle(" + str(self.__width) + ", "
+        string += str(self.__height) + ")"
+        return string
