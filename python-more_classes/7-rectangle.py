@@ -6,7 +6,7 @@ class Rectangle:
     """class: Rectangle"""
 
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """On instantiation"""
@@ -71,13 +71,11 @@ class Rectangle:
             if row > 0:
                 string += '\n'
             for col in range(self.__width):
-                string += '#'
+                string += str(self.print_symbol)
         return string
 
     def __repr__(self):
-        string = "Rectangle(" + str(self.__width) + ", "
-        string += str(self.__height) + ")"
-        return string
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         print('Bye rectangle...')
