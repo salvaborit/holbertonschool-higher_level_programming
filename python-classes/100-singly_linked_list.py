@@ -18,7 +18,7 @@ class Node:
         return self.__data
 
     @property
-    def next_node(self, value):
+    def next_node(self):
         return self.__next_node
 
     @data.setter
