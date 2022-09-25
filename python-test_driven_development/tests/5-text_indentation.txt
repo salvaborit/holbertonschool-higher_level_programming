@@ -22,5 +22,11 @@ TypeError: text_indentation() missing 1 required positional argument: 'text'
 Traceback (most recent call last):
 TypeError: text must be a string
 
->>> text_indentation("")
+>>> text_indentation('hello. my name is Salvador. yours?')
+hello.
 <BLANK_LINE>
+my name is Salvador.
+<BLANK_LINE>
+yours?
+<BLANK_LINE>
+
