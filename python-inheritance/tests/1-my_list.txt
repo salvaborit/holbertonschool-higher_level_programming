@@ -18,9 +18,6 @@ Using ''my_list''
 >>> issubclass(MyList, list)
 True
 
-
-
-
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
@@ -31,9 +28,3 @@ True
 >>> my_list[0] = -1
 >>> my_list.print_sorted()
 [-1, 2, 3, 4, 5]
-
->>> empty_list = MyList()
->>> print(empty_list)
-[]
-
-
