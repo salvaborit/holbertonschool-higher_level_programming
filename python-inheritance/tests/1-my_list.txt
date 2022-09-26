@@ -32,3 +32,7 @@ True
 >>> empty_list = MyList()
 >>> empty_list.print_sorted()
 []
+
+>>> my_list = MyList([1, 2, 4, 3])
+>>> my_list.print_sorted()
+[1, 2, 3, 4]
