@@ -30,5 +30,5 @@ True
 [-1, 2, 3, 4, 5]
 
 >>> empty_list = MyList()
->>> print(empty_list)
+>>> empty_list.print_sorted()
 []
