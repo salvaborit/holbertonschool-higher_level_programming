@@ -24,3 +24,11 @@ True
 >>> my_list.sort()
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
+
+>>> my_list[0] = -1
+>>> my_list.print_sorted()
+[-1, 2, 3, 4, 5]
+
+>>> empty_list = MyList()
+>>> print(empty_list)
+[]
