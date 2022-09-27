@@ -2,4 +2,6 @@
 """Python interpreter"""
 
 
+class BaseGeometry:
+    """class: BaseGeometry"""
 
