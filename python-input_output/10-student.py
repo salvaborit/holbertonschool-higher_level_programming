@@ -20,6 +20,8 @@ class Student:
         for item in attrs:
             if type(item) is not str:
                 return self.__dict__
+        if len(attrs) == 0:
+            return {}
 
         keys = list(self.__dict__.keys())
         set_keys = set(keys)
