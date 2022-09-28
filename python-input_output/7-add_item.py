@@ -2,7 +2,7 @@
 """Python interpreter"""
 
 
-import sys, json
+import sys
 """sys module"""
 
 
