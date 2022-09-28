@@ -2,9 +2,6 @@
 """Python interpreter"""
 
 
-from operator import not_
-
-
 class Student:
     """class: Student"""
 
