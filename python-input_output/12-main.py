@@ -13,4 +13,8 @@ def print_triangle(triangle):
 
 
 if __name__ == "__main__":
+    print_triangle(pascal_triangle(2))
+    print('--')
     print_triangle(pascal_triangle(5))
+    print('--')
+    print_triangle(pascal_triangle(10))
