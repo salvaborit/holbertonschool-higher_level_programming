@@ -2,7 +2,8 @@
 """Python interpreter"""
 
 
-Base = __import__('base').base
+from lib2to3.pytree import Base
+
 
 class Rectangle(Base):
     """class: Rectangle (inherits from 'Base')"""
@@ -26,6 +27,7 @@ class Rectangle(Base):
     def width(self, value):
         """Setter"""
         self.__width = value
+
 
     """HEIGHT s/g"""
     @property
