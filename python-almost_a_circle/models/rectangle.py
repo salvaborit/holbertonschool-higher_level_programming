@@ -5,6 +5,7 @@
 from models.base import Base
 """to be able to inherit Base to Ractangle"""
 
+
 class Rectangle(Base):
     """class: Rectangle (inherits from 'Base')"""
 
