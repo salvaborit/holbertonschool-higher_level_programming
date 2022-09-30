@@ -2,7 +2,7 @@
 """Python interpreter"""
 
 
-Base = __import__('base').Base
+Base = __import__('base').base
 
 class Rectangle(Base):
     """class: Rectangle (inherits from 'Base')"""
@@ -14,6 +14,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
+
 
     """WIDTH s/g"""
     @property
@@ -48,6 +49,7 @@ class Rectangle(Base):
     def x(self, value):
         """Setter"""
         self.x = value
+
 
     """X s/g"""
     @property
