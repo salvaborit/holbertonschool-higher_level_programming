@@ -2,7 +2,7 @@
 """Python interpreter"""
 
 
-from lib2to3.pytree import Base
+from models.base import Base
 
 
 class Rectangle(Base):
