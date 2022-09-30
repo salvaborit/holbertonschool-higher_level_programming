@@ -45,21 +45,21 @@ class Rectangle(Base):
     @property
     def x(self):
         """Getter"""
-        return self.x
+        return self.__x
 
     @height.setter
     def x(self, value):
         """Setter"""
-        self.x = value
+        self.__x = value
 
 
-    """X s/g"""
+    """Y s/g"""
     @property
     def y(self):
         """Getter"""
-        return self.y
+        return self.__y
 
     @height.setter
     def y(self, value):
         """Setter"""
-        self.y = value
+        self.__y = value
