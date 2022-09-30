@@ -3,7 +3,7 @@
 
 
 from models.base import Base
-
+"""to be able to inherit Base to Ractangle"""
 
 class Rectangle(Base):
     """class: Rectangle (inherits from 'Base')"""
@@ -16,7 +16,6 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-
     """WIDTH s/g"""
     @property
     def width(self):
@@ -27,7 +26,6 @@ class Rectangle(Base):
     def width(self, value):
         """Setter"""
         self.__width = value
-
 
     """HEIGHT s/g"""
     @property
@@ -40,18 +38,16 @@ class Rectangle(Base):
         """Setter"""
         self.__height = value
 
-
     """X s/g"""
     @property
     def x(self):
         """Getter"""
         return self.__x
 
-    @height.setter
+    @x.setter
     def x(self, value):
         """Setter"""
         self.__x = value
-
 
     """Y s/g"""
     @property
@@ -59,7 +55,7 @@ class Rectangle(Base):
         """Getter"""
         return self.__y
 
-    @height.setter
+    @y.setter
     def y(self, value):
         """Setter"""
         self.__y = value
