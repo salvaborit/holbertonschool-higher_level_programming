@@ -97,3 +97,9 @@ class Rectangle(Base):
     def area(self):
         """Returns area of instance"""
         return self.__width * self.__height
+
+    def display(self):
+        """Prints a rectangle of hashbangs (#) to stdout"""
+        for row in range(self.__height):
+            for cols in range(self.__width):
+                print('#', end='' if cols != self.__width - 1 else '\n')
