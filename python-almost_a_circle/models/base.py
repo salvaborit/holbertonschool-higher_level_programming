@@ -58,3 +58,4 @@ class Base:
         """Returns an instance with all attributes already set"""
         new_instance = cls(100, 100, 100, 100)
         new_instance.update(**dictionary)
+        return new_instance
