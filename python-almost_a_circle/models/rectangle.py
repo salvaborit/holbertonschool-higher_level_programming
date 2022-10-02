@@ -93,3 +93,7 @@ class Rectangle(Base):
         self.type_validator("y", value)
         self.xy_validator("y", value)
         self.__y = value
+
+    def area(self):
+        """Returns area of instance"""
+        return self.__width * self.__height
