@@ -114,7 +114,7 @@ class Rectangle(Base):
         return string
 
     def update(self, *args, **kwargs):
-        """Updates class"""
+        """Updates instance attributes"""
         if len(args) != 0:
             for num, arg in enumerate(args):
                 if num == 0:
