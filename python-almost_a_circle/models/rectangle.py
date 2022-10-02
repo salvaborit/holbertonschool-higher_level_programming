@@ -12,10 +12,35 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor"""
         super().__init__(id)
+
+        self.type_validator("width", width)
+        self.type_validator("height", height)
+        self.type_validator("x", x)
+        self.type_validator("y", y)
+        self.wh_validator("width", width)
+        self.wh_validator("height", height)
+        self.xy_validator("x", x)
+        self.xy_validator("y", y)
+
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
+
+    def type_validator(self, name, value):
+        """Type validator (must be int)"""
+        if type(value) is not int:
+            raise TypeError(f'{name} must be an integer')
+
+    def wh_validator(self, name, value):
+        """Width/height validator (greater than 0)"""
+        if value <= 0:
+            raise ValueError(f'{name} must be > 0')
+
+    def xy_validator(self, name, value):
+        """X/Y validator (positive)"""
+        if value < 0:
+            raise ValueError(f'{name} must be >= 0')
 
     """WIDTH s/g"""
     @property
@@ -26,6 +51,8 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Setter"""
+        self.type_validator("width", value)
+        self.wh_validator("width", value)
         self.__width = value
 
     """HEIGHT s/g"""
@@ -37,6 +64,8 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Setter"""
+        self.type_validator("height", value)
+        self.wh_validator("height", value)
         self.__height = value
 
     """X s/g"""
@@ -48,6 +77,8 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Setter"""
+        self.type_validator("x", value)
+        self.xy_validator("x", value)
         self.__x = value
 
     """Y s/g"""
@@ -59,4 +90,6 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Setter"""
+        self.type_validator("y", value)
+        self.xy_validator("y", value)
         self.__y = value
