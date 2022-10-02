@@ -56,6 +56,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set"""
-        new_instance = cls(100, 100, 100, 100)
+        if cls.__name__ == 'Rectangle':
+            new_instance = cls(10, 10)
+        if cls.__name__ == 'Square':
+            new_instance = cls(10)
         new_instance.update(**dictionary)
         return new_instance
