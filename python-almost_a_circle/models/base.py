@@ -34,6 +34,9 @@ class Base:
         """Serialize JSON to file"""
         filename = f'{cls.__name__}.json'
         json_list = []
+        if list_objs is None:
+            with open(filename, 'w') as file:
+                file.write(json.dumps(json_list))
         for instance in list_objs:
             json_list.append(cls.to_json_string(instance.to_dictionary()))
         with open(filename, 'w') as file:
