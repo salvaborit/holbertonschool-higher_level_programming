@@ -12,7 +12,6 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """Constructor"""
         super().__init__(size, size, x, y, id)
-        self.__size = size
         self.__width = size
         self.__height = size
         self.__x = x
@@ -20,20 +19,19 @@ class Square(Rectangle):
 
     def __str__(self):
             string = '[Square]' + f' ({self.id}) '
-            string += f'{self.__x}/{self.__y} - {self.__size}'
+            string += f'{self.__x}/{self.__y} - {self.__width}'
             return string
 
     """SIZE s/g"""
     @property
     def size(self):
         """Getter"""
-        return self.__size
+        return self.__width
 
     @size.setter
     def size(self, value):
         """Setter"""
         super().type_validator("width", value)
         super().wh_validator("width", value)
-        self.__size = value
         self.__width = value
         self.__height = value
