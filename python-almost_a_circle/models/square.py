@@ -34,18 +34,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Updates instance attributes"""
-        if len(args) != 0:
-            for num, arg in enumerate(args):
-                if num == 0:
-                    self.id = arg
-                if num == 1:
-                    self.width = arg
-                    self.height = arg
-                if num == 2:
-                    self.x = arg
-                if num == 3:
-                    self.y = arg
-        else:
+        if len(args) == 0:
             for key in kwargs:
                 if key == 'size':
                     self.width = kwargs.get(key)
@@ -56,3 +45,14 @@ class Square(Rectangle):
                     self.x = kwargs.get(key)
                 if key == 'y':
                     self.y = kwargs.get(key)
+        else:
+            for num, arg in enumerate(args):
+                if num == 0:
+                    self.id = arg
+                if num == 1:
+                    self.width = arg
+                    self.height = arg
+                if num == 2:
+                    self.x = arg
+                if num == 3:
+                    self.y = arg
