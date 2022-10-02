@@ -21,7 +21,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Returns JSON string representaion of parameter"""
+        """Serialize JSON to string"""
         if list_dictionaries is None:
             return '[]'
         return json.dumps(list_dictionaries)
