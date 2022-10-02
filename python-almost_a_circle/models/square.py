@@ -2,7 +2,6 @@
 """Python interpreter"""
 
 
-from turtle import width
 from models.rectangle import Rectangle
 """to make square inherit from rectangle"""
 
@@ -23,3 +22,18 @@ class Square(Rectangle):
             string = '[Square]' + f' ({self.id}) '
             string += f'{self.__x}/{self.__y} - {self.__size}'
             return string
+
+    """SIZE s/g"""
+    @property
+    def size(self):
+        """Getter"""
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """Setter"""
+        super().type_validator("width", value)
+        super().wh_validator("width", value)
+        self.__size = value
+        self.__width = value
+        self.__height = value
