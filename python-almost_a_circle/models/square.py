@@ -15,7 +15,7 @@ class Square(Rectangle):
 
     def __str__(self):
             string = '[Square]' + f' ({self.id}) '
-            string += f'{self.__x}/{self.__y} - {self.__width}'
+            string += f'{self.x}/{self.y} - {self.width}'
             return string
 
     """SIZE s/g"""
@@ -56,3 +56,7 @@ class Square(Rectangle):
                     self.x = arg
                 if num == 3:
                     self.y = arg
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of an instance"""
+        return self.__dict__
