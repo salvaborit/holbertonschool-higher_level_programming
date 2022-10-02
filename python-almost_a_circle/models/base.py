@@ -2,7 +2,8 @@
 """Python interpreter"""
 
 
-import json, os.path
+import os.path
+import json
 """JSON package"""
 
 
@@ -42,7 +43,7 @@ class Base:
             string += cls.to_json_string(instance.to_dictionary())
         string += ']'
         with open(filename, 'w') as file:
-                file.write(string)
+            file.write(string)
 
     @staticmethod
     def from_json_string(json_string):
