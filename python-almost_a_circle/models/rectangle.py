@@ -103,3 +103,8 @@ class Rectangle(Base):
         for row in range(self.__height):
             for cols in range(self.__width):
                 print('#', end='' if cols != self.__width - 1 else '\n')
+
+    def __str__(self):
+        string = '[Rectangle]' + f' ({self.id}) '
+        string += f'{self.__x}/{self.__y} - {self.__width}/{self.__height}'
+        return string
