@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """Python interpreter"""
 
+
 from models.rectangle import Rectangle
 """to make square inherit from rectangle"""
+
 
 class Square(Rectangle):
     """class: Square (inherits from 'Rectangle')"""
