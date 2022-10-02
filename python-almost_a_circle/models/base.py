@@ -3,6 +3,7 @@
 
 
 import json
+from typing import Dict, List
 """JSON package"""
 
 
@@ -22,6 +23,9 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """Serialize JSON to string"""
-        if list_dictionaries is None:
+        if list_dictionaries is None or type(list_dictionaries) is not List:
             return '[]'
+        for dict in list_dictionaries:
+            if type(dict) is not Dict:
+                return '[]'
         return json.dumps(list_dictionaries)
