@@ -100,7 +100,11 @@ class Rectangle(Base):
 
     def display(self):
         """Prints a rectangle of hashbangs (#) to stdout"""
+        for i in range(self.__y):
+            print()
         for row in range(self.__height):
+            for i in range(self.__x):
+                print(' ', end='')
             for cols in range(self.__width):
                 print('#', end='' if cols != self.__width - 1 else '\n')
 
