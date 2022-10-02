@@ -45,3 +45,10 @@ class Base:
         string += ']'
         with open(filename, 'w') as file:
                 file.write(string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns list of JSON string representation"""
+        if json_string is None:
+            return []
+        return json.loads(json_string)
