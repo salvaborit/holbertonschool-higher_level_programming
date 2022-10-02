@@ -140,7 +140,6 @@ class Rectangle(Base):
                 if num == 4:
                     self.__y = arg
 
-
     def to_dictionary(self):
         """Returns the dictionary representation of an instance"""
         return self.__dict__
