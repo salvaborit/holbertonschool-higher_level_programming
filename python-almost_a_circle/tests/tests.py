@@ -8,7 +8,7 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-class TestBaseIDs(unittest.TestCase):
+class TestBaseID(unittest.TestCase):
     """Tests if ID attribute works correctly"""
 
     def setUp(self):
@@ -22,3 +22,10 @@ class TestBaseIDs(unittest.TestCase):
 
     def test_3(self):
         self.assertEqual(self.b.id, 3)
+
+class TestBaseID89(unittest.TestCase):
+    """Tests for ID assignment"""
+
+    def test_1(self):
+        self.b = Base(89)
+        self.assertEqual(self.b.id, 89)
