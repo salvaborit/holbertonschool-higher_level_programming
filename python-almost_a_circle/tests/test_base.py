@@ -38,4 +38,5 @@ class TestToJsonString(unittest.TestCase):
         self.assertEqual(self.b.to_json_string(None), "[]")
 
     def test_1(self):
+        # empty_list = []
         self.assertEqual(self.b.to_json_string([]), "[]")
