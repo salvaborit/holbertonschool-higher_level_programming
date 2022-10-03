@@ -10,6 +10,11 @@ class TestRectangle(unittest.TestCase):
     """Tests Rectangle instantiation"""
 
     def test_1(self):
-        self.r = Rectangle(1, 2)
+        self.r = Rectangle(1, 2, 3, 4)
         self.assertEqual(self.r.width, 1)
         self.assertEqual(self.r.height, 2)
+        self.assertEqual(self.r.x, 3)
+        self.assertEqual(self.r.y, 4)
+
+    def test_2(self):
+        self.assertRaises(TypeError, Rectangle, 1, 2, 3, "4")
