@@ -30,9 +30,27 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.r.x, 3)
         self.assertEqual(self.r.y, 4)
 
+    def test_1d(self):
+        """Regular instantiation with args(1, 2, 3, 4, 5)"""
+        self.r = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(self.r.width, 1)
+        self.assertEqual(self.r.height, 2)
+        self.assertEqual(self.r.x, 3)
+        self.assertEqual(self.r.y, 4)
+        self.assertEqual(self.r.id, 5)
+
     def test_2a(self):
         """Invalid parameter type on instantiation"""
         self.assertRaises(TypeError, Rectangle, "1", 2)
         self.assertRaises(TypeError, Rectangle, 1, "2")
         self.assertRaises(TypeError, Rectangle, 1, 2, "3")
         self.assertRaises(TypeError, Rectangle, 1, 2, 3, "4")
+
+    def test_3(self):
+        """Instantiation with negatives/zero"""
+        self.assertRaises(ValueError, Rectangle, -1, 2)
+        self.assertRaises(ValueError, Rectangle, 1, -2)
+        self.assertRaises(ValueError, Rectangle, 0, 2)
+        self.assertRaises(ValueError, Rectangle, 1, 0)
+        self.assertRaises(ValueError, Rectangle, 1, 2, -3)
+        self.assertRaises(ValueError, Rectangle, 1, 2, 3, -4)
