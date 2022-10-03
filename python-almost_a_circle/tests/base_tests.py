@@ -4,12 +4,10 @@
 
 import unittest
 from models.base import Base
-from models.rectangle import Rectangle
-from models.square import Square
 
 
 class TestBaseID(unittest.TestCase):
-    """Tests if ID attribute works correctly"""
+    """Tests ID attribute"""
 
     def setUp(self):
         self.b = Base()
@@ -29,3 +27,15 @@ class TestBaseID89(unittest.TestCase):
     def test_1(self):
         self.b = Base(89)
         self.assertEqual(self.b.id, 89)
+
+class TestToJsonString(unittest.TestCase):
+    """Tests to_json_string() method"""
+
+    def setUp(self):
+        self.b = Base()
+
+    def test_1(self):
+        self.assertEqual(self.b.to_json_string(None), "[]")
+
+    def test_1(self):
+        self.assertEqual(self.b.to_json_string([]), "[]")
