@@ -8,13 +8,17 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-class TestSquare(unittest.TestCase):
+class TestBaseIDs(unittest.TestCase):
+    """Tests if ID attribute works correctly"""
 
-    # Test of Base() for assigning automatically an ID exists
-    def test_base_id(self):
-        b1 = Base()
-        b2 = Base()
-        b3 = Base()
-        self.assertEqual(b1.id, 1)
-        self.assertEqual(b2.id, 2)
-        self.assertEqual(b3.id, 3)
+    def setUp(self):
+        self.b = Base()
+
+    def test_1(self):
+        self.assertEqual(self.b.id, 1)
+
+    def test_2(self):
+        self.assertEqual(self.b.id, 2)
+
+    def test_3(self):
+        self.assertEqual(self.b.id, 3)
