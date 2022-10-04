@@ -6,7 +6,7 @@ import unittest
 from models.rectangle import Rectangle
 
 
-class TestRectangle(unittest.TestCase):
+class TestRectangleInstantiation(unittest.TestCase):
     """Tests Rectangle instantiation"""
 
     def test_1a(self):
