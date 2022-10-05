@@ -2,6 +2,8 @@
 """Python interpreter"""
 
 
+from io import StringIO
+import sys
 import unittest
 from models.rectangle import Rectangle
 
@@ -67,6 +69,20 @@ class TestMethods(unittest.TestCase):
         self.r = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(self.r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
 
+    def test_display(self):
+        """display() method"""
+        stdout = StringIO()
+        sys.stdout = stdout
+        r = Rectangle(2, 1, 0, 0)
+        r.display()
+        self.assertEqual(stdout.getvalue(), '##\n')
+
+        stdout = StringIO()
+        sys.stdout = stdout
+        r = Rectangle(2, 1, 1, 0)
+        r.display()
+        self.assertEqual(stdout.getvalue(), ' ##\n')
+
     def test_to_dict(self):
         """to_dictionary() method"""
         self.r = Rectangle(1, 2, 3, 4, 5)
@@ -122,3 +138,6 @@ class TestMethods(unittest.TestCase):
         r = Rectangle.create(
             **{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
         self.assertEqual(r.y, 4)
+
+    # def test_save_to_file(self):
+    #     """save_to_file() method"""
