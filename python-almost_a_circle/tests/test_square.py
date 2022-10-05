@@ -100,9 +100,15 @@ class TestSqSave2(unittest.TestCase):
 
     def test_save_to_file2(self):
         """save_to_file() method"""
-        Square.save_to_file([])
+        empty_list = []
+        # filename = 'Square.json'
+        Square.save_to_file(empty_list)
         with open('Square.json') as file:
             self.assertEqual('[]', file.read())
+
+
+class TestSqSave3(unittest.TestCase):
+    """save_to_file() method"""
 
     def test_save_to_file3(self):
         """save_to_file() method"""
