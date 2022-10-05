@@ -108,3 +108,17 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(self.r.x, 3)
         self.r.update(**{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
         self.assertEqual(self.r.y, 4)
+
+    def test_create(self):
+        """create() method"""
+        r = Rectangle.create(**{'id': 89})
+        self.assertEqual(r.id, 89)
+        r = Rectangle.create(**{'id': 89, 'width': 1})
+        self.assertEqual(r.width, 1)
+        r = Rectangle.create(**{'id': 89, 'width': 1, 'height': 2})
+        self.assertEqual(r.height, 2)
+        r = Rectangle.create(**{'id': 89, 'width': 1, 'height': 2, 'x': 3})
+        self.assertEqual(r.x, 3)
+        r = Rectangle.create(
+            **{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
+        self.assertEqual(r.y, 4)
