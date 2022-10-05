@@ -139,5 +139,9 @@ class TestMethods(unittest.TestCase):
             **{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
         self.assertEqual(r.y, 4)
 
-    # def test_save_to_file(self):
-    #     """save_to_file() method"""
+    def test_save_to_file(self):
+        """save_to_file() method"""
+        Rectangle.save_to_file(None)
+        with open('Rectangle.json', 'r') as file:
+            file_content = file.read()
+        self.assertEqual(file_content, '[]')
