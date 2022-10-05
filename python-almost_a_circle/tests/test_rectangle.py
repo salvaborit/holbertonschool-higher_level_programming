@@ -8,7 +8,7 @@ import unittest
 from models.rectangle import Rectangle
 
 
-class TestInstantiation(unittest.TestCase):
+class TestRectInstantiation(unittest.TestCase):
     """Instantiation"""
 
     def test_regular_instantiation_1(self):
@@ -58,7 +58,7 @@ class TestInstantiation(unittest.TestCase):
         self.assertRaises(ValueError, Rectangle, 1, 2, 3, -4)
 
 
-class TestMethods(unittest.TestCase):
+class TestRectMethods(unittest.TestCase):
     def test_area(self):
         """Area method"""
         self.r = Rectangle(1, 2)
@@ -138,6 +138,10 @@ class TestMethods(unittest.TestCase):
         r = Rectangle.create(
             **{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
         self.assertEqual(r.y, 4)
+
+
+class TestRectSave(unittest.TestCase):
+    """save_to_file() method"""
 
     def test_save_to_file1(self):
         """save_to_file() method"""

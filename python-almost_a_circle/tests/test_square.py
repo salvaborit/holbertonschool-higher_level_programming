@@ -6,7 +6,7 @@ import unittest
 from models.square import Square
 
 
-class TestInstantiation(unittest.TestCase):
+class TestSqInstantiation(unittest.TestCase):
     """Instantiation"""
 
     def test_regular_instantiation_1(self):
@@ -31,7 +31,7 @@ class TestInstantiation(unittest.TestCase):
         self.assertRaises(ValueError, Square, 1, 2, -3)
 
 
-class TestMethods(unittest.TestCase):
+class TestSqMethods(unittest.TestCase):
     """Methods"""
 
     def test__str__(self):
@@ -84,6 +84,10 @@ class TestMethods(unittest.TestCase):
         self.s = Square.create(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
         self.assertEqual(self.s.y, 3)
 
+
+class TestSqSave(unittest.TestCase):
+    """save_to_file() method"""
+
     def test_save_to_file1(self):
         """save_to_file() method"""
         Square.save_to_file(None)
@@ -104,10 +108,11 @@ class TestMethods(unittest.TestCase):
                 '[{"id": 1, "size": 1, "x": 0, "y": 0}]', file.read())
 
 
-class TestSquareLoad(unittest.TestCase):
-    """tests load"""
+class TestSqLoad(unittest.TestCase):
+    """load_from_file() method"""
 
-    def test_loadfromfilerec(self):
+    def test_load_from_file(self):
+        """load_from_file() method"""
         Square.save_to_file([Square(1, 2)])
         lf = Square.load_from_file()
         self.assertTrue(isinstance(lf, list))
