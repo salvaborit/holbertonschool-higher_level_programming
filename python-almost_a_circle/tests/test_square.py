@@ -72,3 +72,14 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(self.s.x, 2)
         self.s.update(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
         self.assertEqual(self.s.y, 3)
+
+    def test_create(self):
+        """create() method"""
+        self.s = Square.create(**{'id': 89})
+        self.assertEqual(self.s.id, 89)
+        self.s = Square.create(**{'id': 89, 'size': 1})
+        self.assertEqual(self.s.width, 1)
+        self.s = Square.create(**{'id': 89, 'size': 1, 'x': 2})
+        self.assertEqual(self.s.x, 2)
+        self.s = Square.create(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
+        self.assertEqual(self.s.y, 3)
