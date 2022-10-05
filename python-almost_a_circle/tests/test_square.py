@@ -83,3 +83,22 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(self.s.x, 2)
         self.s = Square.create(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
         self.assertEqual(self.s.y, 3)
+
+    def test_save_to_file1(self):
+        """save_to_file() method"""
+        Square.save_to_file(None)
+        with open('Square.json') as file:
+            self.assertEqual('[]', file.read())
+
+    def test_save_to_file2(self):
+        """save_to_file() method"""
+        Square.save_to_file([])
+        with open('Square.json') as file:
+            self.assertEqual('[]', file.read())
+
+    def test_save_to_file3(self):
+        """save_to_file() method"""
+        Square.save_to_file([Square(1, 0, 0, 1)])
+        with open('Square.json') as file:
+            self.assertEqual(
+                '[{"id": 1, "size": 1, "x": 0, "y": 0}]', file.read())
