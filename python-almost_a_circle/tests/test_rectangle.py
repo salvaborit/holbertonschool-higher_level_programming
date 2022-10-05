@@ -142,5 +142,5 @@ class TestMethods(unittest.TestCase):
     def test_save_to_file(self):
         """save_to_file() method"""
         Rectangle.save_to_file(None)
-        with open('Rectangle.json', 'r') as file:
+        with open('Rectangle.json') as file:
             self.assertEqual('[]', file.read())
