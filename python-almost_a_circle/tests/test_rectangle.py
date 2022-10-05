@@ -153,12 +153,8 @@ class TestMethods(unittest.TestCase):
 
     def test_save_to_file3(self):
         """save_to_file() method"""
+        self.assertEqual(Rectangle.load_from_file(), [])
         Rectangle.save_to_file([Rectangle(1, 2, 0, 0, 1)])
         with open('Rectangle.json') as file:
             self.assertEqual(
                 '[{"id": 1, "width": 1, "height": 2, "x": 0, "y": 0}]', file.read())
-
-    def load_to_file(self):
-        """load_from_file() method"""
-        Rectangle.save_to_file(None)
-        self.assertEqual(Rectangle.load_from_file(), [])
