@@ -64,8 +64,3 @@ class TestRectangleInstantiation(unittest.TestCase):
         """___str___ method"""
         self.r = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(self.r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
-
-    def test_display(self):
-        """Display method"""
-        self.r = Rectangle(2, 1, 0, 0)
-        self.assertEqual(self.r.display(), '##\n')
