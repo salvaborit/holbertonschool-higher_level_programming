@@ -94,11 +94,17 @@ class TestMethods(unittest.TestCase):
         self.r.update(89, 1, 2, 3, 4)
         self.assertEqual(self.r.y, 4)
 
-    # def test_update_dict_arguments(self):
-    #     """update() method with dictionary type
-    #     (**, key='value') argument passed"""
-    #     self.r.
-    #     self.r.
-    #     self.r.
-    #     self.r.
-    #     self.r.
+    def test_update_dict_arguments(self):
+        """update() method with dictionary type
+        (**, key='value') argument passed"""
+        self.r = Rectangle(10, 10, 10, 10, 10)
+        self.r.update(**{'id': 89})
+        self.assertEqual(self.r.id, 89)
+        self.r.update(**{'id': 89, 'width': 1})
+        self.assertEqual(self.r.width, 1)
+        self.r.update(**{'id': 89, 'width': 1, 'height': 2})
+        self.assertEqual(self.r.height, 2)
+        self.r.update(**{'id': 89, 'width': 1, 'height': 2, 'x': 3})
+        self.assertEqual(self.r.x, 3)
+        self.r.update(**{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
+        self.assertEqual(self.r.y, 4)
