@@ -85,7 +85,7 @@ class TestSqMethods(unittest.TestCase):
         self.assertEqual(self.s.y, 3)
 
 
-class TestSqSave(unittest.TestCase):
+class TestSqSave1(unittest.TestCase):
     """save_to_file() method"""
 
     def test_save_to_file1(self):
@@ -93,6 +93,10 @@ class TestSqSave(unittest.TestCase):
         Square.save_to_file(None)
         with open('Square.json') as file:
             self.assertEqual('[]', file.read())
+
+
+class TestSqSave2(unittest.TestCase):
+    """save_to_file() method"""
 
     def test_save_to_file2(self):
         """save_to_file() method"""
@@ -116,3 +120,7 @@ class TestSqLoad(unittest.TestCase):
         Square.save_to_file([Square(1, 2)])
         lf = Square.load_from_file()
         self.assertTrue(isinstance(lf, list))
+
+
+if __name__ == '__main__':
+    unittest.main()

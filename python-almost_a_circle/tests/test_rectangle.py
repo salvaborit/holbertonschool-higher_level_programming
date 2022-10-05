@@ -140,7 +140,7 @@ class TestRectMethods(unittest.TestCase):
         self.assertEqual(r.y, 4)
 
 
-class TestRectSave(unittest.TestCase):
+class TestRectSave1(unittest.TestCase):
     """save_to_file() method"""
 
     def test_save_to_file1(self):
@@ -148,6 +148,10 @@ class TestRectSave(unittest.TestCase):
         Rectangle.save_to_file(None)
         with open('Rectangle.json') as file:
             self.assertEqual('[]', file.read())
+
+
+class TestRectSave2(unittest.TestCase):
+    """save_to_file() method"""
 
     def test_save_to_file2(self):
         """save_to_file() method"""
