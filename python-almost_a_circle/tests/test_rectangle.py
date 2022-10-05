@@ -6,8 +6,8 @@ import unittest
 from models.rectangle import Rectangle
 
 
-class TestRectangleInstantiation(unittest.TestCase):
-    """Tests Rectangle instantiation"""
+class TestInstantiation(unittest.TestCase):
+    """Instantiation"""
 
     def test_regular_instantiation_1(self):
         """Regular instantiation with args(1, 2)"""
@@ -55,6 +55,8 @@ class TestRectangleInstantiation(unittest.TestCase):
         self.assertRaises(ValueError, Rectangle, 1, 2, -3)
         self.assertRaises(ValueError, Rectangle, 1, 2, 3, -4)
 
+
+class TestMethods(unittest.TestCase):
     def test_area(self):
         """Area method"""
         self.r = Rectangle(1, 2)
@@ -70,3 +72,33 @@ class TestRectangleInstantiation(unittest.TestCase):
         self.r = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(self.r.to_dictionary(), {
                          'id': 5, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
+
+    def test_update_nothing(self):
+        """update() method with no args"""
+        self.r1 = Rectangle(1, 2, 3, 4, 5)
+        self.r2 = Rectangle(1, 2, 3, 4, 5)
+        self.r2.update()
+        self.assertEqual(self.r1.to_dictionary(), self.r2.to_dictionary())
+
+    def test_update_int_arguments(self):
+        """update() method with regular integer arguments passed"""
+        self.r = Rectangle(1, 2, 3, 4, 5)
+        self.r.update(89)
+        self.assertEqual(self.r.id, 89)
+        self.r.update(89, 1)
+        self.assertEqual(self.r.width, 1)
+        self.r.update(89, 1, 2)
+        self.assertEqual(self.r.height, 2)
+        self.r.update(89, 1, 2, 3)
+        self.assertEqual(self.r.x, 3)
+        self.r.update(89, 1, 2, 3, 4)
+        self.assertEqual(self.r.y, 4)
+
+    # def test_update_dict_arguments(self):
+    #     """update() method with dictionary type
+    #     (**, key='value') argument passed"""
+    #     self.r.
+    #     self.r.
+    #     self.r.
+    #     self.r.
+    #     self.r.
