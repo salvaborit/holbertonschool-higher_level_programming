@@ -21,12 +21,14 @@ class TestBaseID(unittest.TestCase):
     def test_3(self):
         self.assertEqual(self.b.id, 3)
 
+
 class TestBaseID89(unittest.TestCase):
     """Tests for ID assignment"""
 
     def test_1(self):
         self.b = Base(89)
         self.assertEqual(self.b.id, 89)
+
 
 class TestToJsonString(unittest.TestCase):
     """Tests Base.to_json_string() method"""
@@ -37,8 +39,9 @@ class TestToJsonString(unittest.TestCase):
     def test_1(self):
         self.assertEqual(self.b.to_json_string(None), "[]")
 
-    def test_1(self):
+    def test_2(self):
         self.assertEqual(self.b.to_json_string([]), "[]")
+
 
 class TestFromJsonString(unittest.TestCase):
     """Tests Base.from_json_string() method"""
