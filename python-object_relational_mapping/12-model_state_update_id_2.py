@@ -20,10 +20,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State()
-    new_state.name = 'Louisiana'
-    print(int(new_state.id))
-
-    session.add(new_state)
+    result = session.query(State).filter(
+        State.id.like(2)).first()
+    result.name = 'New Mexico'
+    session.add(result)
     session.commit()
     session.close()
