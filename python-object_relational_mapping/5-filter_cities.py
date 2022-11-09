@@ -21,7 +21,10 @@ if __name__ == '__main__':
         WHERE s.name = %s \
         ORDER BY c.id", (sys.argv[4], ))
     result = cursor.fetchall()
-    for record in result:
-        print(record)
+    for i, record in enumerate(result):
+        if i > 0:
+            print(', ', end='')
+        print(str(record[0]), end='')
+    print()
     cursor.close()
     db.close()
