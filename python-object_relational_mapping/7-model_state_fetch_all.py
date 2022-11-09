@@ -22,6 +22,7 @@ if __name__ == '__main__':
     session = Session()
 
     result = session.query(State).all()
+
     for i, item in enumerate(result):
         print(f'{i + 1}: {item.name}')
 
