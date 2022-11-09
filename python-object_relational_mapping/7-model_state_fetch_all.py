@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     result = session.query(State).all()
 
-    for i, item in enumerate(result):
-        print(f'{i + 1}: {item.name}')
+    for item in result:
+        print(f'{item.id}: {item.name}')
 
     session.close()
