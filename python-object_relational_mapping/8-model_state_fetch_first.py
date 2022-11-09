@@ -20,7 +20,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).all()
-    print(f'1: {result[0].name}')
+    result = session.query(State).first()
+    print(f'{result.id}: {result.name}')
 
     session.close()
