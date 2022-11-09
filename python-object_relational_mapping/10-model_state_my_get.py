@@ -23,8 +23,7 @@ if __name__ == '__main__':
     result = session.query(State).filter(
         State.name.like(argv[4])).first()
     if result is not None:
-        for item in result:
-            print(f'{item.id}')
+        print(f'{result.id}')
     else:
         print('Not found')
     session.close()
