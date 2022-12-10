@@ -6,6 +6,6 @@ const array = [
   'JavaScript is amazing'
 ];
 
-for (item of array) {
+for (const item of array) {
   console.log(item);
 }
