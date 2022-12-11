@@ -2,7 +2,7 @@
 
 let args = process.argv.splice(2);
 
-if (args.length === 0) return;
+if (args.length === 0) console.log(0);
 
 args.forEach((item, index) => {
   args[index] = parseInt(item);
