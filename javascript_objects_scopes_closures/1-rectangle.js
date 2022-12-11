@@ -6,4 +6,4 @@ module.exports =
       this.width = w;
       this.height = h;
     }
-};
+  };
