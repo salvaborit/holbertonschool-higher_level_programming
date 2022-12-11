@@ -8,10 +8,6 @@ if (args.length === 0) {
 }
 
 args.forEach((item, index) => {
-  if (item[0] === '-') {
-    console.log(0);
-    process.exit();
-  }
   args[index] = parseInt(item);
 });
 args.sort((item, index) => item - index);
