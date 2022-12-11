@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let args = process.argv.splice(2);
+const args = process.argv.splice(2);
 
 if (args.length === 0) console.log(0);
 
