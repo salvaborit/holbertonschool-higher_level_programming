@@ -8,4 +8,4 @@ module.exports =
         this.height = h;
       }
     }
-};
+  };
