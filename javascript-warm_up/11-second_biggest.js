@@ -3,12 +3,12 @@
 const args = process.argv.splice(2);
 
 if (args.length === 0) {
-    console.log(0);
-    return;
-};
+  console.log(0);
+  process.exit();
+}
 
 args.forEach((item, index) => {
-  if (item[0] == '-') {
+  if (item[0] === '-') {
     console.log(0);
     process.exit();
   }
