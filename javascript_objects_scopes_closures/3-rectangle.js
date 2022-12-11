@@ -2,10 +2,6 @@
 
 module.exports =
   class Rectangle {
-
-    width;
-    height;
-
     constructor (w, h) {
       if (parseInt(w) > 0 && parseInt(h) > 0) {
         this.width = w;
@@ -16,10 +12,9 @@ module.exports =
     print () {
       for (let row = 0; row < this.height; row++) {
         for (let col = 0; col < this.width; col++) {
-          process.stdout.write('X')
+          process.stdout.write('X');
         }
-        console.log('')
+        console.log('');
       }
     }
-
   };
