@@ -9,5 +9,5 @@ const options = {
 
 request(options, function (err, resp, body) {
   if (err) return;
-  console.log(resp.statusCode);
+  console.log('code:', resp.statusCode);
 });
