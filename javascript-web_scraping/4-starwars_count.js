@@ -13,12 +13,14 @@ request(options, function (err, resp, body) {
   const movies = JSON.parse(body).results;
 
   let count = 0;
+
   for (const movie of movies) {
-    const charList = movie.characters;
-    console.log(movie.title);
-    if (charList.includes('https://swapi-api.hbtn.io/api/people/18/')) {
-      count++;
+    for (const char of movie.characters) {
+      if (char.includes('18')) {
+        count++;
+      }
     }
   }
+
   console.log(count);
 });
